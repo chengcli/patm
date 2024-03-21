@@ -1,13 +1,9 @@
-Welcome to Lumache's documentation!
-===================================
+Planetary ATMospehre Documatation
+=================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Planetary ATMospehre (patm) is a Python package for modeling the atmospheres of
+planets and exoplanets. It is designed to be easy to use, and to provide a
+simple interface for modeling atmospheric radiation, chemistry, and dynamics.
 
 .. note::
 

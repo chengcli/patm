@@ -1,8 +1,10 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["setuptools", "wheel", "cmake", "pybind11"]
+build-backend = "setuptools.build_meta"
 
-[project]
-name = "lumache"
-authors = [{name = "Graziella", email = "graziella@lumache"}]
-dynamic = ["version", "description"]
+[tool.cibuildwheel]
+before-build = "pip install -r requirements.txt"
+
+# Install system library
+[tool.cibuildwheel.linux]
+manylinux-x86_64-image = "manylinux2014"

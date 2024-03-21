@@ -6,29 +6,28 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use patm, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install patm
 
-Creating recipes
-----------------
+Calculate the infrared spectrum of Earth's atmosphere
+-----------------------------------------------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+To retrieve a standard earth atmosphere, use the
+you can use the ``patm.earth.get_preset_atm("us_standard")`` function:
 
-.. autofunction:: lumache.get_random_ingredients
+.. autofunction:: patm.earth.get_preset_atm
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+The parameter should be either ``"us_standard"``, ``"fish"``,
+or ``"veggies"``. Otherwise, :py:func:`patm.earth.get_preset_atm`
 will raise an exception.
 
-.. autoexception:: lumache.InvalidKindError
+.. autoexception:: patm.earth.InvalidKindError
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+>>> from patm import earth
+>>> earth.get_preset_atm("us_standard")
 
